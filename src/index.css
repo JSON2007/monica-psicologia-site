@@ -1,0 +1,4 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{font-family:'Montserrat',sans-serif;color:#2E4032;background:#F8F4EF;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}*{box-sizing:border-box}body{margin:0;min-width:320px}button,a{ -webkit-tap-highlight-color:transparent}::selection{background:#D9C8B8;color:#2E4032}
