@@ -1,4 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{font-family:'Montserrat',sans-serif;color:#2E4032;background:#F8F4EF;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}*{box-sizing:border-box}body{margin:0;min-width:320px}button,a{ -webkit-tap-highlight-color:transparent}::selection{background:#D9C8B8;color:#2E4032}
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #263b35;
+  background: #f7f5f0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #d9c8b8; color: #263b35; }
+
+/* Movimento delicado para dar vida sem competir com o conteúdo. */
+@keyframes soft-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#inicio h1, #inicio p, #inicio a, #inicio img { animation: soft-rise .7s both; }
+#inicio h1 { animation-delay: .08s; }
+#inicio p { animation-delay: .16s; }
+#inicio a { animation-delay: .22s; }
+#inicio img { animation-delay: .12s; }
+
+a, button, article, input, select { transition-duration: 220ms; }
+article { transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease; }
+article:hover { transform: translateY(-3px); }
+
+:focus-visible { outline: 3px solid #8ca99a; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
